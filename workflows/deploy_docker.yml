@@ -4,11 +4,11 @@ on:
   push:
       branches: [ main ]
       paths:
-        - 'part2/04-cicd/**'
+        - 'Dockerfiles/Backend/app/**'
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  DOCKER_IMAGE_NAME: streamlit
+  DOCKER_IMAGE_NAME: backend
   GCE_INSTANCE: ${{ secrets.GCE_INSTANCE }}
   GCE_INSTANCE_ZONE: ${{ secrets.GCE_INSTANCE_ZONE }}
 
@@ -33,10 +33,10 @@ jobs:
         gcloud --quiet auth configure-docker
 
     # Model 파일 복사
-    - name: Copy model file
-      run: |
-        cd part2/04-cicd
-        sh copy_asset.sh
+#     - name: Copy model file
+#       run: |
+#         cd part2/04-cicd
+#         sh copy_asset.sh
 
     # Docker Image Build
     - name: Build
