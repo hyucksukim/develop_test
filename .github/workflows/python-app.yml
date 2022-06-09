@@ -8,7 +8,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  DOCKER_IMAGE_NAME: backend
+  DOCKER_IMAGE_NAME: pre-backend
   GCE_INSTANCE: ${{ secrets.GCE_INSTANCE }}
   GCE_INSTANCE_ZONE: ${{ secrets.GCE_INSTANCE_ZONE }}
 
