@@ -153,14 +153,14 @@ def get_item(asin):
     collection = db["books"]
     query = {'asin': asin}
     cursor = collection.find(query, projection={'_id': False})
-    result = loads(dumps(cursor))
+    result = 1#loads(dumps(cursor))
     return result
 
 @app.get("/title/{asin}")
 def get_title(asin):
     items = get_item(asin)
 
-    return items[0]#['title']
+    return items[0]['title']
     
     
 if __name__ == "__main__":
