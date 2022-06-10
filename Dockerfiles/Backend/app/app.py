@@ -160,7 +160,7 @@ def get_item(asin):
 def get_title(asin):
     items = get_item(asin)
 
-    return items[0]['title']
+    return items[0]#['title']
     
     
 if __name__ == "__main__":
