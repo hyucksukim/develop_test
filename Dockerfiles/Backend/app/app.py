@@ -159,8 +159,8 @@ def get_item(asin):
 @app.get("/title/{asin}")
 def get_title(asin):
     items = get_item(asin)
-    aaa = 1
-    return items[0]['title888']
+    
+    return 1 #items[0]['title']
     
     
 if __name__ == "__main__":
