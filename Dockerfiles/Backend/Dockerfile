@@ -13,8 +13,5 @@ ENV	PYTHONFAULTHANDLER=1 \
 
 #RUN apt-get install -y build-essential libpython
 RUN pip install -r requirements.txt
-
-EXPOSE 8080
-
 #CMD ["uvicorn", "app.py:app", "--host", "localhost", "--port", "8080", "--reload"]
 CMD ["python3", "app.py"]
