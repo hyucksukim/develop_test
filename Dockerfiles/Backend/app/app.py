@@ -153,7 +153,7 @@ def get_item(asin):
     collection = db["books"]
     query = {'asin': asin}
     cursor = collection.find(query, projection={'_id': False})
-    result = 24#loads(dumps(cursor))
+    result = 'please'#loads(dumps(cursor))
     return result
 
 @app.get("/title/{asin}")
