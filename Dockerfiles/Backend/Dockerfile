@@ -33,5 +33,5 @@ WORKDIR /app
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 COPY ./app/ /app/
 RUN cp /app/boostcamp.inter /workspace/data/boostcamp/
-RUN cp /app/MacridVAE-cpu_final.pth /saved/
+RUN cp /app/MacridVAE-cpu_final.pth /app/saved/
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
