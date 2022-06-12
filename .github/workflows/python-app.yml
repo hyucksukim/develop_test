@@ -36,6 +36,7 @@ jobs:
       run: |
         pwd
         gsutil cp gs://artifacts.helical-ranger-352017.appspot.com/MacridVAE-cpu_final.pth Dockerfiles/Backend/app
+        gsutil cp gs://artifacts.helical-ranger-352017.appspot.com/boostcamp.inter Dockerfiles/Backend/app
 
     # Docker Image Build
     - name: Build
