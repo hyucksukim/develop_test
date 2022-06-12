@@ -34,13 +34,13 @@ jobs:
     # Model 파일 복사
     - name: Copy model file
       run: |
-        echo pwd
         pwd
         #gsutil cp gs://artifacts.helical-ranger-352017.appspot.com/MacridVAE-cpu_final.pth Dockerfiles/Backend/app
 
     # Docker Image Build
     - name: Build
       run: |-
+        pwd
         docker build Dockerfiles/Backend --tag "gcr.io/$PROJECT_ID/$DOCKER_IMAGE_NAME:$GITHUB_SHA"
     # Docker Image Push
     - name: Publish
