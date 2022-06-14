@@ -1,9 +1,14 @@
 name: Build and Deploy to Google Compute Engine
 
+# on:
+#   schedule:
+#     # 이 크론은 평일 5시 (한국시간 14시)에 실행됩니다.
+#     - cron: '0 7 * * 1-5'
 on:
-  schedule:
-    # 이 크론은 평일 5시 (한국시간 14시)에 실행됩니다.
-    - cron: '0 7 * * 1-5'
+  push:
+      branches: [ main ]
+      paths:
+        - 'Dockerfiles/Backend/app/**'
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
