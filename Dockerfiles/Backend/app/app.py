@@ -1,7 +1,7 @@
 from cmath import exp
 
 from operator import getitem
-#3
+
 from turtle import pd
 
 from fastapi import FastAPI, Query
